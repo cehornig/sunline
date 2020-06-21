@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+  <head>
+    <title>Sunline</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <script type="text/javascript" src="{% static "js/chart.js" %}"></script>
+    <link rel="stylesheet" href="{% static "styles/styles.css" %}">
+
+    <!--
+      Setting up Django favicon
+      https://learndjango.com/tutorials/django-favicon-tutorial
+    -->
+
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+  </head>
+  <body>
+    <div id="nav">
+      <a href="/" id="logo">Sunline</a>
+      <a href="/about">About</a>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div id="footer">
+      <span>&copy;2020 Claire Hornig</span>
+    </div>
+  </body>
+</html>
