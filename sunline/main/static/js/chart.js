@@ -21,10 +21,10 @@ function populateChart() {
   fetching.setAttribute('style', 'display:inline-block');
 
   if (date == '') {
-    var apiString = '/api/' + latitude + '/' + longitude;
+    apiString = '/api/' + latitude + '/' + longitude;
     isToday = true;
   } else {
-    var apiString = '/api/date/' + latitude + '/' + longitude + '/' + date;
+    apiString = '/api/date/' + latitude + '/' + longitude + '/' + date;
     isToday = false;
   }
 
